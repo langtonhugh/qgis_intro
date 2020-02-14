@@ -1,0 +1,38 @@
+---
+title: "Introduction to QGIS: morning session"
+author: "Sam Langton"
+date: "26/02/2020"
+output:
+  html_document:
+    toc: true
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Preamble
+
+## Background
+
+Introducing QGIS.
+
+- Open
+- User friendly
+- Lots of data formats
+- Plig-ins
+- Organic, continuous development, grass-roots, open collaboration
+
+## Spatial data
+
+Vector, raster.
+
+## Projections
+
+## QGIS interface
+
+## Loading in data
+
+## Visualising

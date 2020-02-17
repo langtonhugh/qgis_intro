@@ -1,0 +1,33 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1581686239310.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "400CD0E3",
+    "lastKnownWriteTime" : 1581679920,
+    "last_content_update" : 1581686239310,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "30143707",
+        "caption" : "trams.geo.df",
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=trams.geo.df&cache_key=30143707",
+        "displayedObservations" : 93,
+        "environment" : "",
+        "expression" : "trams.geo.df",
+        "object" : "trams.geo.df",
+        "preview" : 0,
+        "totalObservations" : 93,
+        "variables" : 12
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 3,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_dataframe"
+}

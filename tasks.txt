@@ -1,0 +1,22 @@
+task 1: loading and visualisation
+- repeat the tram stop exercise from the live demo
+- load in a csv file, convert to spatial
+- colour points 
+- add OSM and change transparency
+- colour points by a variable (e.g. line, but also something else).
+- size points by a variable (e.g. blue badge parking, but also
+  something else).
+
+task 2: loading, handling and visualisation
+- load in anti social behaviour crime data csv, convert to spatial
+- filter for January only
+- layer the OSM over it, add some transparency for reference, explore.
+- load in the LSOA polygon data for GM
+- point to polygon counts to LSOA
+- create thematic map for crime counts, include OSM if needed.
+- create thematic map for another variable (e.g. deprivation).
+
+task 3: visualisation mega
+- data of your choice
+- data provided
+- export high-quality graphic using the Print Layout window

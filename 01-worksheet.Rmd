@@ -13,26 +13,40 @@ editor_options:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## Preamble
+# Preamble
 
-## Background
+This worksheet contains material for an introductory QGIS course held at the [Cathie Marsh Institute for Social Research](https://www.cmi.manchester.ac.uk/) on 26 February 2020. All material is available on [GitHub](https://github.com/langtonhugh/qgis_intro).
+
+# Background
+
+The aim of this short course is to get you started using QGIS as a (completely free!) software for creating, manipulating, exploring and visualising spatial data. As we will see, QGIS is a powerful tool for generating aesthetically pleasing maps, but it is also invaluable for conducting analysis and substantive exploratory research. The material we cover today will equip you with the skills necessary to begin visualising and analysing your own data. Once you're comfortable with the skills introduced in this worksheet, please feel free to put these into practice using your own data, or data downloaded from the _data resources_ section of this worksheet.
+
+You can consider today to be somewhat of a 'crash course' in QGIS. As such, it's worthwhile remembering that the materials we cover today form part of a much wider field commonly known as 'Geographic Information Science' (GIS). For a quick introduction to the field, you can read a [recent book chapter](https://www.research.manchester.ac.uk/portal/en/publications/gis-and-geovisual-analysis(6f08f8f5-fb0c-4280-8c82-c8f1b7e02d76).html), or for a more detailed introduction, there are some recommended books in the _further reading_ at the bottom of this page.
+
+# Why use QGIS?
+
+QGIS is an open-source piece of software. This means, for one thing, that it is free, which represents a significant advantage over comparable software like [ArcGIS](https://www.arcgis.com/index.html) for students and institutions (understandably) unwilling to fork out thousands of pounds on licence fees. But that's just a practical advantage: open-source also means transparency, continuous development and a supportive community of developers and users. QGIS is a key component of a growing movement towards open-source software in geospatial analysis, with tools like [Geoda](https://geodacenter.github.io/) and [GIS functionality in R](https://geocompr.robinlovelace.net/intro.html) becoming increasingly popular. 
 
 Introducing QGIS.
 
 - Open
 - User friendly
 - Lots of data formats
-- Plig-ins
+- Plug-ins
 - Organic, continuous development, grass-roots, open collaboration
 
-## Spatial data
+# Spatial data
 
 Vector, raster.
 
-## Projections
+# Projections
 
-## QGIS interface
+# QGIS interface
 
-## Loading in data
+# Exercise 1: tram stops
 
-## Visualising
+# Exercise 2: crime maps
+
+# Data resources
+
+# Further reading

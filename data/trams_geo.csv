@@ -1,4 +1,4 @@
-stop,rstnam,line,nptref,smsref,gmgrfe,gmgrfn,mainrd,sidest,nettyp,gazref,netwrf,lifts,ramps,cycle_prov,cycle_lockers,stands,car_parking,total_spaces,bb_spaces
+stop,rstnam,line,nptref,smsref,eastings,northings,mainrd,sidest,nettyp,gazref,netwrf,lifts,ramps,cycle_prov,cycle_lockers,stands,car_parking,total_spaces,bb_spaces
 Altrincham,Altrincham,Altrincham,9400ZZMAALT,MANTMTMG,377000,387900,STAMFORD NEW RD,MOSS LANE,M,E0028261,SJR493,No,Yes,Yes,0,8,No,0,0
 Brooklands,Brooklands,Altrincham,9400ZZMABKS,MANTMTMT,378423,391192,BROOKLANDS RD,STATION APPROCH,M,E0028623,SJR040,Yes,No,Yes,2,3,Yes,108,0
 Cornbrook,Cornbrook,Altrincham,9400ZZMACRN,MANTMTPM,382335,397060,POMONA STRAND,NA,M,E0028280,SJR478,Yes,No,No,0,0,No,0,0

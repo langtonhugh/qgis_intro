@@ -4,8 +4,8 @@ author: "Sam Langton"
 date: "26/02/2020"
 output:
   html_document:
-    toc: true
-editor_options: 
+    toc: yes
+editor_options:
   chunk_output_type: console
 ---
 
@@ -224,7 +224,7 @@ knitr::include_graphics("img/symbology4.png")
 
 We can see that, not only is their variation between tram stops in the number of blue badge parking spaces, but there is a spatial patterning to these distributions, with the city centre having few spaces, and stops near the end of lines having many. It also helps us spot potential issues. It is unlikely that Manchester Airport has no blue badge spaces nearby, so such visual explorations can help us identify areas which demand further explanation. For example, perhaps the spaces are not near the tram stop itself, or are not free.
 
-```{r, echo=FALSE, out.width="800px", fig.align="center", fig.cap = "<br> Updated map view with points sized according to the number of spaces"}
+```{r, echo=FALSE, out.width="700px", fig.align="center", fig.cap = "<br> Updated map view with points sized according to the number of spaces"}
 knitr::include_graphics("img/symbology5.png")
 ```
 
@@ -240,7 +240,7 @@ knitr::include_graphics("img/osm.png")
 
 We can alter the appearence of this layer using the preferences symbology. For the below map, the Open Street Map (OSM) layer has been made grayscale and the brightness is quite high, so that our tram stop points stand out. The label names have now been turned off because the OSM layer is now giving the context. We can now interactively explore the map to find explanations for the patterns observed, or perhaps to identify areas where city planners could improve accessibility for blue badge holders at tram stops.
 
-```{r, echo=FALSE, out.width="800px", fig.align="center", fig.cap = "<br> Updated map view with points sized according to the number of spaces, with an OSM layer"}
+```{r, echo=FALSE, out.width="700px", fig.align="center", fig.cap = "<br> Updated map view with points sized according to the number of spaces, with an OSM layer"}
 knitr::include_graphics("img/osm_trams.png")
 ```
 
@@ -248,7 +248,71 @@ knitr::include_graphics("img/osm_trams.png")
 
 Spend some time trying out different labelling and symbology options on different variables to answer your own research questions. How do different tram stops fair when it comes to other forms of accessibility, such as ramps? How might we best visualise this? 
 
+Once you've had a good exploration of the tram data, feel free to move on to the next exercise using police recorded crime data.
+
 # Exercise 2: crime maps
+
+## Raw data
+
+To practice some of what we've learnt so far, and to learn some new skills, we're going to be using some police recorded crime data in Greater Manchester. The data was compiled from an [open data portal](https://data.police.uk/) and contains information about anti-social behaviour incidents recorded by police in Greater Manchester during 2017. [Download this data]() now and save it to a folder one your local machine.
+
+Opening it up in Excel, you will notice that we have the latitude and longitude coordinates of these incidents, the Lower Super Output Area (LSOA) code in which  the incident occurred, the crime type (ASB) and the month. So again, we have a standard spreadsheet containing spatial information, but it is not being treated as such in Excel. Based on the tram stop data example, you now know how to make this data spatial using the `Layer -> Add Layer -> Add Delimited Text Layer` drop-down menu. This time, however, note that we have latitude and longitude coordinates, **not** easting and northings. This should be setting off alarm bells: you will need to project this data using the ol' WGS 84 (EPSG 4326) rather than the British National Grid. Remember that latitude is on the Y-axis, and longitude is on the X-axis. Have a go at getting this .csv file into QGIS now, turning those coordinates into vector points, just as we did earlier for tram stops. You should end up with a map something like the one below.
+
+```{r, echo=FALSE, out.width="800px", fig.align="center", fig.cap = "<br> Incident locations of Anti-social behaviour in Greater Machester, 2017"}
+knitr::include_graphics("img/gm_points.png")
+```
+
+For some of you, the above map might look a bit squished, and you will intuitively know that it does not look right. This could be for a number of reasons. The most common one (for me, anyway) is because the latitude and longitude coordinates are the wrong way around! Another common reason is because that QGIS is automatically trying to project your data 'on the fly'. It does this to help you, and to ensure that it's difficult to work with multiple layers of data in the wrong projection, but it can also be a bit confusing. You can see in the above screenshot, for example, that my QGIS is actually using the BNG (EPSG 27700), stated in the bottom right of the interface. It's like that because I just finished working with the tram data, which was BNG. You can change the projection of your whole project by clicking on this tab and selecting (in this case) between WSG 84 and BNG as appropriate. If your map looks a bit dodgy, try doing this to resolve it. A good way check what you've done is by using the Open Street Map layer again. If you are working with data from the British Isles, I would recommend sticking the BNG.
+
+## Expressions
+
+We have lots of data here, perhaps a bit too much. If we were only interested in one issue, let's say ASB incidents that occurred in January, we can subset our data according to a condition within QGIS. You can do this within our attribute table. Open your attribute table up as we did earlier, using the tab at the top of the interface. This will open up a table, and we can see we have over 80,000 rows (i.e. observations, ASB incidents, points) in our data. There are a number of useful tabs at the top of this window. We can select specific rows, and then zoom to them on our map, for example. What we are interested in is `Select features using an expression`. This brings up a rather unfriendly looking window, but it is a powerful one. You don't need to be completely familiar with how these expressions work, but it's useful to know some basic syntax. For example, to only select ASB incidents which occurred in January, we can write `"month" = '2007-01'` where _month_ is the variable and _2007-01_ is the category we want.
+
+```{r, echo=FALSE, out.width="600px", fig.align="center", fig.cap = "<br> Subset your data by those incidents that occurred in January"}
+knitr::include_graphics("img/expression.png")
+```
+
+<br>
+
+When you now click on `Select features`, and return to your map view, QGIS will have selected only those incidents that occurred in January, and highlighted them in yellow. We can now save this selection, and add it as a new layer, by right-clicking on the layer and exporting the selection.
+
+```{r, echo=FALSE, out.width="500px", fig.align="center", fig.cap = "<br> Save a selection and create a new layer"}
+knitr::include_graphics("img/save_selected.png")
+```
+
+<br>
+
+This brings up a window in which you must select where you'd like the data to be saved and what to call it, along with a number of other options, such as whether to save it with a projection, and whether to add it to your current map view. You will notice that the data format is an [ESRI Shapefile](https://doc.arcgis.com/en/arcgis-online/reference/shapefiles.htm), a popular format for storing vector data, like the points used here, that we discussed a little earlier today.
+
+```{r, echo=FALSE, out.width="500px", fig.align="center", fig.cap = "<br> Options when save a new layer"}
+knitr::include_graphics("img/save_window.png")
+```
+
+<br>
+
+Once you save it, assuming you ticked the box saying `Add saved file to map`, a new layer will appear in your interface of these observations. We are going to use this layer going forward, so to maintain focus, you can untick the original layer in the **Layer** window, and it will be hidden from view.
+
+When faced with so many points, a useful way of exploring the data is to make them transparent, which might show points which overlap. We can use the `Preferences...` of your layer, and the symbology option, as we explored earlier. Change the `Opacity` slider to make your points more transparent. You might want to change the colour and size of your points whilst you're here, it's up to you.
+
+```{r, echo=FALSE, out.width="500px", fig.align="center", fig.cap = "<br> Options when save a new layer"}
+knitr::include_graphics("img/opacity.png")
+```
+
+<br>
+
+As you'll see, some points are completely transparent whilst others appear to be opaque because so many points are overlapping. This is because crime locations in open crime data have been 'snapped' to a grid, in order to anonymise the locations. If you feel like exploring this more, try using the `Point diplacement` option from the drop-down symbology menu. Either way, going forward we might want to consider aggregating these points to areal units, such as neighbourhoods. So, instead of lots of points, we have polygons (see description of vector data from earlier!) which have associated attribute data about the number of ASB incidents which occurred within each boundary. First, let's load in some of this data.
+
+## Load vector polygons
+
+So far, we've been creating spatial data from coordinates, but a great deal of spatial data is already as such when you download it. For example, census neighbourhood boundaries released by the [UK Data Service](https://census.ukdataservice.ac.uk/get-data/boundary-data.aspx) can be downloaded as shapefiles. I've already done this for you for Lower Super Output Areas (LSOA) in Greater Manchester, each of which contain around 1500 residents. When you download it, you will get a .zip file containing a number of different files.
+
+## Clipping
+
+## Point to polygon
+
+## Thematic map
+
+
 
 # Data resources
 

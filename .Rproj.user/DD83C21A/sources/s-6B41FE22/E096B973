@@ -1,0 +1,27 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1582452246126.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "E096B973",
+    "lastKnownWriteTime" : 1582460922,
+    "last_content_update" : 1582460922594,
+    "path" : "~/GitHub/qgis_intro/01-worksheet.Rmd",
+    "project_path" : "01-worksheet.Rmd",
+    "properties" : {
+        "chunk_output_type" : "console",
+        "cursorPosition" : "257,0",
+        "scrollLine" : "248",
+        "source_window_id" : "wxri0oavhw9sl"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_markdown"
+}

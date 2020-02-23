@@ -27,7 +27,7 @@ You can consider today to be somewhat of a 'crash course' in QGIS. As such, it's
 
 QGIS is an open-source piece of software. This means, for one thing, that it is free, which represents a significant advantage over comparable software like [ArcGIS](https://www.arcgis.com/index.html) for students and institutions (understandably) unwilling to fork out for licence fees. But that's just a practical advantage: open-source also means transparency, continuous development and a supportive community of developers and users. QGIS is a key part of a wider, growing movement towards open-source software in geospatial analysis, with tools like [GeoDa](https://geodacenter.github.io/) and [GIS functionality in R](https://geocompr.robinlovelace.net/intro.html) becoming increasingly popular. A key benefit of QGIS being open-source is that it is constantly evolving, with lots of smart people continuously contributing to new versions and plug-ins to expand its capability.
 
-```{r, echo=FALSE, out.width = "600px", fig.align= "center", fig.cap="QGIS is part of a wider open-soure movement"}
+```{r, echo=FALSE, out.width = "600px", fig.align= "center", fig.cap="QGIS is part of a wider open-soure movement."}
 knitr::include_graphics("img/open_source.png")
 ```
 
@@ -50,7 +50,7 @@ is formed. Lines with equal start and end points, with at least three vertices, 
 In our urban landscape, points might be used to represent street lights, lines to represent roads,
 and polygons to represent buildings. Of course, a great deal of spatial data defined objects which do not physically exist on the ground, such as electoral wards or neighbourhood boundaries. So, these vertices collectively describe objects in space, and the attributes describe these objects. Given its popularity in social science research, we will focus on vector data throughout today.
 
-```{r, echo=FALSE, out.width = "600px", fig.align= "center", fig.cap="Vector data. Source: [Data Carpentry](https://datacarpentry.org/organization-geospatial/02-intro-vector-data/) via the National Ecological Observatory Network (NEON)"}
+```{r, echo=FALSE, out.width = "600px", fig.align= "center", fig.cap="Vector data. Source: [Data Carpentry](https://datacarpentry.org/organization-geospatial/02-intro-vector-data/) via the National Ecological Observatory Network (NEON)."}
 knitr::include_graphics("img/vector_data.png")
 ```
 
@@ -76,7 +76,7 @@ As we noted earlier, maps are representations of the real world. Importantly, th
 
 <br>
 
-```{r, echo=FALSE, out.width="600px", fig.align="center", fig.cap="Source: [Brilliant Maps](https://brilliantmaps.com/xkcd/)"}
+```{r, echo=FALSE, out.width="600px", fig.align="center", fig.cap="Source: [Brilliant Maps](https://brilliantmaps.com/xkcd/)."}
 knitr::include_graphics("img/proj.png")
 ```
 
@@ -88,7 +88,7 @@ When working within GIS software like QGIS, we are subject to the same restricti
 
 <br>
 
-```{r, echo=FALSE, out.width="600px", fig.align="center", fig.cap="An example of latitude and longitude coordinates on the Google Maps online platform"}
+```{r, echo=FALSE, out.width="600px", fig.align="center", fig.cap="An example of latitude and longitude coordinates on the Google Maps online platform."}
 knitr::include_graphics("img/greenwich.png")
 ```
 
@@ -100,7 +100,7 @@ If you want to read more about projections and CRS, you can read the excellent Q
 
 <br>
 
-```{r, echo=FALSE, out.width="700px", fig.align="center", fig.cap="British National Grid nested grids. Souce: [Ordnance Survey](https://getoutside.ordnancesurvey.co.uk/guides/beginners-guide-to-grid-references/)"}
+```{r, echo=FALSE, out.width="700px", fig.align="center", fig.cap="British National Grid nested grids. Souce: [Ordnance Survey](https://getoutside.ordnancesurvey.co.uk/guides/beginners-guide-to-grid-references/)."}
 knitr::include_graphics("img/bng.png")
 ```
 
@@ -114,7 +114,7 @@ Now we are familiar with some GIS fundamentals, we can move on to opening up QGI
 
 For these tutorials we will be using QGIS version 3.6.3 in order to match what is in the computer lab. If you are using your own laptop, you might have a different version, but it shouldn't make too much difference. All previous releases of QGIS can be downloaded retrospectively from their [website](https://qgis.org/downloads/) if you want the exact same version.
 
-```{r, echo=FALSE, out.width="800px", fig.align="center", fig.cap = "Basic QGIS interface"}
+```{r, echo=FALSE, out.width="800px", fig.align="center", fig.cap = "Basic QGIS interface."}
 knitr::include_graphics("img/interface.png")
 ```
 
@@ -132,7 +132,7 @@ knitr::include_graphics("img/plug1.png")
 
 <br>
 
-```{r, echo=FALSE, out.width="800px", fig.align="center", fig.cap = "<br> Step 2: Search for Quick Map Services and click 'Install Plugin'"}
+```{r, echo=FALSE, out.width="800px", fig.align="center", fig.cap = "<br> Step 2: Search for Quick Map Services and click 'Install Plugin'."}
 knitr::include_graphics("img/plug2.png")
 ```
 
@@ -144,7 +144,7 @@ The plug-in will now become available under the _Web_ drop-down menu. Don't worr
 
 To demonstrate some of the functionality in QGIS, we are going to use some data about tram stops on Greater Manchester's Metrolink service. The data was compiled from some [open government data](https://data.gov.uk/dataset/8faea7ee-eb7d-43dd-b1d4-f01aac4c44d3/metrolink-stops-and-rail-stations/datafile/1a15f3dd-a33e-466a-93ee-f028e176af47/preview) and some information about facilities available at each tram stop. Start by [downloading](https://github.com/langtonhugh/qgis_intro/raw/master/data/trams_geo.csv) this data directly as a .csv file and saving it in a folder on your machine. Explore it using Excel. It will look something like this:
 
-```{r, echo=FALSE, out.width="800px", fig.align="center", fig.cap = "<br> Data structure for trams_geo.csv"}
+```{r, echo=FALSE, out.width="800px", fig.align="center", fig.cap = "<br> Data structure for trams_geo.csv."}
 knitr::include_graphics("img/tram_geo.png")
 ```
 
@@ -154,19 +154,19 @@ Each row is an observation, in this case, a tram stop in Greater Manchester, of 
 
 To make this conversion, we are going to add a new layer to our project in QGIS. We can do this using a specific option designed to pull out coordinates from a delimited text file using `Layer -> Add Layer -> Add Delimited Text Layer` on the drop-down menus.
 
-```{r, echo=FALSE, out.width="800px", fig.align="center", fig.cap = "<br> Adding a layer from a .csv file"}
+```{r, echo=FALSE, out.width="800px", fig.align="center", fig.cap = "<br> Adding a layer from a .csv file."}
 knitr::include_graphics("img/csv_layer.png")
 ```
 
 Bringing up this box will give you a series of options. First, we need to select the .csv file itself using the `File name` box by finding the file location on our local machine. Doing this will automatically fill in most of the remaining options and bring up a summary of how QGIS has read in the data, identiying the rows and columns. Often, you will have to manually select which columns represent which coordinates, and you will need to specify the CRS. There is a good chance that QGIS has actually done this for you. If not, we know that our coordinate columns are eastings (X field) and northings (Y field). We also know that, given that we have easting-northings columns on locations in Britain, that the CRS will be the BNG with an EPSG code of 27700.
 
-```{r, echo=FALSE, out.width="800px", fig.align="center", fig.cap = "<br> Completing information needed to create spatial points from a .csv file"}
+```{r, echo=FALSE, out.width="800px", fig.align="center", fig.cap = "<br> Completing information needed to create spatial points from a .csv file."}
 knitr::include_graphics("img/csv_layer_load.png")
 ```
 
 Once you've completed this information, click `Add` and close the window, and there we have it! You are viewing the point locations of tram stops in Greater Manchester. You can navigate around this data by scrolling and click+dragging your mouse. The **Layer** window now contains `trams_geo`. Just to make more sense of our introduction earlier, it's worth mentioning that these points are _vector data point_, a very common way of representing specific pinpoint locations in QGIS. Each point has retained its _attribute data_ contained in the original .csv file. You can view it by clicking on the table symbol in the toolbar at the top of your interface. You'll notice that this table is exactly the same as our original spreadsheet.
 
-```{r, echo=FALSE, out.width="300px", fig.align="center", fig.cap = "<br> Attribute table icon"}
+```{r, echo=FALSE, out.width="300px", fig.align="center", fig.cap = "<br> Attribute table icon."}
 knitr::include_graphics("img/attribute.png")
 ```
 
@@ -174,7 +174,7 @@ knitr::include_graphics("img/attribute.png")
 
 A good way to begin exploring data like this, either for interest or to identify interesting patterns, is by using the `Properties...` option within the **Layer** window. You can access this option by right clicking on the name of the layer itself, in this case, trams_geo. It will bring up a window with lots of options down the left hand side, including basic information about the layer itself (e.g. the CRS), but also options to add information to your map using symbology and labels. There are endless options with these properties, many of which we'll cover today, but for starters, let's add some labels to our points so we can identify what is what. A basic single label will display the _stop_ variable (i.e. the name of the stop) for each point, as shown in the below screenshot. Feel free to make amendments to the text font, style and size as you see fit.
 
-```{r, echo=FALSE, out.width="700px", fig.align="center", fig.cap = "<br> Adding labels to points"}
+```{r, echo=FALSE, out.width="700px", fig.align="center", fig.cap = "<br> Adding labels to points."}
 knitr::include_graphics("img/labels.png")
 ```
 
@@ -182,7 +182,7 @@ knitr::include_graphics("img/labels.png")
 
 Once you click `Apply` the labels will be added in the map view window. Now we can actually see which point corresponds to which tram stop.
 
-```{r, echo=FALSE, out.width="800px", fig.align="center", fig.cap = "<br> Map view of points with labels"}
+```{r, echo=FALSE, out.width="800px", fig.align="center", fig.cap = "<br> Map view of points with labels."}
 knitr::include_graphics("img/labels_map.png")
 ```
 
@@ -192,7 +192,7 @@ In a similar manner to how we have just linked the _stop_ variable to each point
 
 <br>
 
-```{r, echo=FALSE, out.width="900px", fig.align="center", fig.cap = "<br> Choosing a categorized symbology"}
+```{r, echo=FALSE, out.width="900px", fig.align="center", fig.cap = "<br> Choosing a categorized symbology."}
 knitr::include_graphics("img/symbology1.png")
 ```
 
@@ -208,7 +208,7 @@ knitr::include_graphics("img/symbology2.png")
 
 As before, clicking on `Apply` will you make these change in our map view. It now contains information on which stop is which, and makes a distinction between the different lines.
 
-```{r, echo=FALSE, out.width="800px", fig.align="center", fig.cap = "<br> Updated map view with colours points by the line variable"}
+```{r, echo=FALSE, out.width="800px", fig.align="center", fig.cap = "<br> Updated map view with colours points by the line variable."}
 knitr::include_graphics("img/symbology3.png")
 ```
 
@@ -216,7 +216,7 @@ knitr::include_graphics("img/symbology3.png")
 
 The possibilities of symbology preferences are pretty expansive. We can visualise a continuous variable using the _Graduated_ option (instead of _Categorized_, used above). For this example, let's use the _bb_spaces_ variable, which tells us how many blue badge parking spaces are available at each tram stop. Doing so will give us an indication as to which tram stations have more or less spaces, but it will also tell us whether there is a meaningful geographic distribution to these patterns. Have a go at this now, using the below example as a guide, making amendments to things like the number of classes, as you find appropriate. 
 
-```{r, echo=FALSE, out.width="900px", fig.align="center", fig.cap = "<br> Changing our symbology preferences to size points according to the number of blue badge parking spaces"}
+```{r, echo=FALSE, out.width="900px", fig.align="center", fig.cap = "<br> Changing our symbology preferences to size points according to the number of blue badge parking spaces."}
 knitr::include_graphics("img/symbology4.png")
 ```
 
@@ -224,7 +224,7 @@ knitr::include_graphics("img/symbology4.png")
 
 We can see that, not only is their variation between tram stops in the number of blue badge parking spaces, but there is a spatial patterning to these distributions, with the city centre having few spaces, and stops near the end of lines having many. It also helps us spot potential issues. It is unlikely that Manchester Airport has no blue badge spaces nearby, so such visual explorations can help us identify areas which demand further explanation. For example, perhaps the spaces are not near the tram stop itself, or are not free.
 
-```{r, echo=FALSE, out.width="700px", fig.align="center", fig.cap = "<br> Updated map view with points sized according to the number of spaces"}
+```{r, echo=FALSE, out.width="700px", fig.align="center", fig.cap = "<br> Updated map view with points sized according to the number of spaces."}
 knitr::include_graphics("img/symbology5.png")
 ```
 
@@ -232,7 +232,7 @@ knitr::include_graphics("img/symbology5.png")
 
 To give a bit of local context to these maps, we can make use of the Quick Map Services plug-in we downloaded earlier to add an [Open Street Map](https://www.openstreetmap.org/#map=6/54.910/-3.432) layer to our project. We can do this by selecting `Web -> QuickMapServices -> OSM -> OSM Standard`. 
 
-```{r, echo=FALSE, out.width="400px", fig.align="center", fig.cap = "<br> Loading an Open Street Map layer"}
+```{r, echo=FALSE, out.width="400px", fig.align="center", fig.cap = "<br> Loading an Open Street Map layer."}
 knitr::include_graphics("img/osm.png")
 ```
 
@@ -240,7 +240,7 @@ knitr::include_graphics("img/osm.png")
 
 We can alter the appearence of this layer using the preferences symbology. For the below map, the Open Street Map (OSM) layer has been made grayscale and the brightness is quite high, so that our tram stop points stand out. The label names have now been turned off because the OSM layer is now giving the context. We can now interactively explore the map to find explanations for the patterns observed, or perhaps to identify areas where city planners could improve accessibility for blue badge holders at tram stops.
 
-```{r, echo=FALSE, out.width="700px", fig.align="center", fig.cap = "<br> Updated map view with points sized according to the number of spaces, with an OSM layer"}
+```{r, echo=FALSE, out.width="700px", fig.align="center", fig.cap = "<br> Updated map view with points sized according to the number of spaces, with an OSM layer."}
 knitr::include_graphics("img/osm_trams.png")
 ```
 
@@ -258,7 +258,7 @@ To practice some of what we've learnt so far, and to learn some new skills, we'r
 
 Opening it up in Excel, you will notice that we have the latitude and longitude coordinates of these incidents, the Lower Super Output Area (LSOA) code in which  the incident occurred, the crime type (ASB) and the month. So again, we have a standard spreadsheet containing spatial information, but it is not being treated as such in Excel. Based on the tram stop data example, you now know how to make this data spatial using the `Layer -> Add Layer -> Add Delimited Text Layer` drop-down menu. This time, however, note that we have latitude and longitude coordinates, **not** easting and northings. This should be setting off alarm bells: you will need to project this data using the ol' WGS 84 (EPSG 4326) rather than the British National Grid. Remember that latitude is on the Y-axis, and longitude is on the X-axis. Have a go at getting this .csv file into QGIS now, turning those coordinates into vector points, just as we did earlier for tram stops. You should end up with a map something like the one below.
 
-```{r, echo=FALSE, out.width="800px", fig.align="center", fig.cap = "<br> Incident locations of Anti-social behaviour in Greater Machester, 2017"}
+```{r, echo=FALSE, out.width="800px", fig.align="center", fig.cap = "<br> Incident locations of Anti-social behaviour in Greater Machester, 2017."}
 knitr::include_graphics("img/gm_points.png")
 ```
 
@@ -268,7 +268,7 @@ For some of you, the above map might look a bit squished, and you will intuitive
 
 We have lots of data here, perhaps a bit too much. If we were only interested in one issue, let's say ASB incidents that occurred in January, we can subset our data according to a condition within QGIS. You can do this within our attribute table. Open your attribute table up as we did earlier, using the tab at the top of the interface. This will open up a table, and we can see we have over 80,000 rows (i.e. observations, ASB incidents, points) in our data. There are a number of useful tabs at the top of this window. We can select specific rows, and then zoom to them on our map, for example. What we are interested in is `Select features using an expression`. This brings up a rather unfriendly looking window, but it is a powerful one. You don't need to be completely familiar with how these expressions work, but it's useful to know some basic syntax. For example, to only select ASB incidents which occurred in January, we can write `"month" = '2007-01'` where _month_ is the variable and _2007-01_ is the category we want.
 
-```{r, echo=FALSE, out.width="600px", fig.align="center", fig.cap = "<br> Subset your data by those incidents that occurred in January"}
+```{r, echo=FALSE, out.width="600px", fig.align="center", fig.cap = "<br> Subset your data by those incidents that occurred in January."}
 knitr::include_graphics("img/expression.png")
 ```
 
@@ -276,7 +276,7 @@ knitr::include_graphics("img/expression.png")
 
 When you now click on `Select features`, and return to your map view, QGIS will have selected only those incidents that occurred in January, and highlighted them in yellow. We can now save this selection, and add it as a new layer, by right-clicking on the layer and exporting the selection.
 
-```{r, echo=FALSE, out.width="500px", fig.align="center", fig.cap = "<br> Save a selection and create a new layer"}
+```{r, echo=FALSE, out.width="500px", fig.align="center", fig.cap = "<br> Save a selection and create a new layer."}
 knitr::include_graphics("img/save_selected.png")
 ```
 
@@ -284,7 +284,7 @@ knitr::include_graphics("img/save_selected.png")
 
 This brings up a window in which you must select where you'd like the data to be saved and what to call it, along with a number of other options, such as whether to save it with a projection, and whether to add it to your current map view. You will notice that the data format is an [ESRI Shapefile](https://doc.arcgis.com/en/arcgis-online/reference/shapefiles.htm), a popular format for storing vector data, like the points used here, that we discussed a little earlier today.
 
-```{r, echo=FALSE, out.width="500px", fig.align="center", fig.cap = "<br> Options when save a new layer"}
+```{r, echo=FALSE, out.width="500px", fig.align="center", fig.cap = "<br> Options when save a new layer."}
 knitr::include_graphics("img/save_window.png")
 ```
 
@@ -294,7 +294,7 @@ Once you save it, assuming you ticked the box saying `Add saved file to map`, a 
 
 When faced with so many points, a useful way of exploring the data is to make them transparent, which might show points which overlap. We can use the `Preferences...` of your layer, and the symbology option, as we explored earlier. Change the `Opacity` slider to make your points more transparent. You might want to change the colour and size of your points whilst you're here, it's up to you.
 
-```{r, echo=FALSE, out.width="500px", fig.align="center", fig.cap = "<br> Options when save a new layer"}
+```{r, echo=FALSE, out.width="500px", fig.align="center", fig.cap = "<br> Options when save a new layer."}
 knitr::include_graphics("img/opacity.png")
 ```
 
@@ -304,15 +304,95 @@ As you'll see, some points are completely transparent whilst others appear to be
 
 ## Load vector polygons
 
-So far, we've been creating spatial data from coordinates, but a great deal of spatial data is already as such when you download it. For example, census neighbourhood boundaries released by the [UK Data Service](https://census.ukdataservice.ac.uk/get-data/boundary-data.aspx) can be downloaded as shapefiles. I've already done this for you for Lower Super Output Areas (LSOA) in Greater Manchester, each of which contain around 1500 residents. When you download it, you will get a .zip file containing a number of different files.
+So far, we've been creating spatial data from coordinates, but a great deal of information is already 'spatial' when you download it. For example, census neighbourhood boundaries released by the [UK Data Service](https://census.ukdataservice.ac.uk/get-data/boundary-data.aspx) can be downloaded as shapefiles. We are going to use Lower Super Output Areas (LSOA) in Greater Manchester, which roughly equate to a definition of neighbourhood, each of which contain around 1500 residents. [Download](https://github.com/langtonhugh/qgis_intro/raw/master/data/gm_lsoa.zip) and save this data to your local machine now, and unzip it. It will contain your spatial data about LSOA boundaries (.shp), information about any projections (.prj), the attribute data associated with each LSOA (.dbf) and a final file (.shx) which you don't need to worry about too much, it just speeds things up for us.
+
+To load in this vector polygon data about LSOA neighbourhoods in Greater Manchester, we are going use the `Add Layer` drop-down menu again, but this time select `Add vector layer`. After clicking on the file tab `...`, navigate to your unzipped folder and select **gm_lsoa.shp**, which contains our vector polygons. After clicking on `Add` the layer will be added to your interface. It might end up obscuring your ASB point locations, but you can rearrange these layers in the **Layer** window to put the point on top. Alternatively, you could make the polygons more transparent, like we did earlier.
+
+```{r, echo=FALSE, out.width="600px", fig.align="center", fig.cap = "<br> Loading in your polygon vectors of LSOA in Greater Manchester."}
+knitr::include_graphics("img/load_vector.png")
+```
+
+<br>
+
+You will notice that there are actually one or two points outside of the Greater Manchester boundaries. To get rid of these, we can use what is called a 'spatial clip'.
 
 ## Clipping
 
-## Point to polygon
+Clipping is useful because it allows you to subset your data based on the degree of spatial overlap or difference between two different layers, one being a set of points, and the other being a set of polygons. A clip is just one of many 'geoprocessing' tools available in QGIS. Navigate to this option now by clicking on `Vector -> Geoprocessing tools -> Clip` using the drop-down menus. Your input layer is the points you want to clip, and the overlay layer is the polygons which define the clipped area. You'll notice that in the below window, my two layers are actually projected differently: we are only getting away with this because QGIS is ensuring that our two layers are being projected identically, as per the CRS stated in the bottom right of the interface (in my case the BNG, EPSG 27700). Clicking `Run` will execute the clip. It may take a few minutes!
+
+```{r, echo=FALSE, out.width="600px", fig.align="center", fig.cap = "<br> Selecting the points to clip by a polygon layer. Note the different CRS."}
+knitr::include_graphics("img/clip_window.png")
+```
+
+<br>
+
+Doing this will create a temporary layer (identified by the symbol next to the layer name), but you may save it if you'd like by right clicking on the layer and selecting `Export -> Save Features As`. Either way, we now have a layer called _Clipped_ which only contains ASB incidents within Greater Manchester. To aggregate these points to our LSOA units, we need to conduct an spatial aggregation.
+
+## Aggregating points to polygon
+
+Counting points in a polygon is a common form of exploratory analysis or descriptive visual. This decision should not be taken lightly, because by aggregating points to polygons, you are losing some level of detail in the data, but in cases like this, it can be very useful. We can navigate to this tool by using `Vector -> Analysis Tools -> Count Points in Polygon` on drop-down menus. This brings up a series of options which we can more or less keep as default. The polygons are our LSOA boundaries, in my case called **gm_lsoa** and our points are the clipped layer, in my case called **Clipped**. This process will create an identical layer to **gm_lsoa** (named "Count" by default) but this new layer will have an additional column in our attribute table called _NUMPOINTS_.
+
+```{r, echo=FALSE, out.width="600px", fig.align="center", fig.cap = "<br> Counting points to polygons."}
+knitr::include_graphics("img/point_poly.png")
+```
+
+<br>
+
+Now we can explore the spatial patterning of ASB across neighbourhoods in Greater Manchester using this new data in a thematic map!
 
 ## Thematic map
 
+With this new layer **Count** we can create a thematic map of ASB incidents at LSOA-level in Greater Manchester, using this newly-created _NUMPOINTS_ layer. The process behind this is very similar to how we coloured in our tram stop points right at the start of today: using layer `Preferences...` and selecting the symbology option. Specifically, because _NUMPOINTS_ is a continuous variable, we need to the 'graduated' option from the symbology drop-down menu. Select this variable, a colour scheme, and create a classification which you think accurately represents the underlying data. You can change the automatic classification method using the `Mode` menu. The below example has specified a classification manually my double-clicking on the values and altering them. What do you think of this classification? It is reasonable? You can explore the distribution of the variable using the `Histogram` tab, which might give you ideas about how to best segment your data.
 
+```{r, echo=FALSE, out.width="900px", fig.align="center", fig.cap = "<br> Thematic map of ASB counts at LSOA-level with a manual classification."}
+knitr::include_graphics("img/asb_lsoa_map.png")
+```
+
+<br>
+
+This helps identify particularly problematic areas, such as the city centre of Manchester, without being concerned about 'unknown' or misleading clusters due to points overlapping. If you'd like, try adding an additional layer to this visualisation, such as the raw points, displaced point symbols, or an OSM layer. 
+
+## Saving maps
+
+This all very nice, but how can you save this map? QGIS has a useful in-built tool which lets you export maps as high-definition visuals. You can also add things like a legend, scale bar and north arrow using this tool. It's referred to as that `Print layout` and you can open a new one using the icon in the tool bar. You will need to give your session a name when you open it, then click OK.
+
+```{r, echo=FALSE, out.width="300px", fig.align="center", fig.cap = "<br> Print Layout icon for exporting saved maps."}
+knitr::include_graphics("img/print_icon.png")
+```
+
+<br>
+
+There are endless options within the Print Layout, but let's cover a few of the key ones. First, ensure that your Map View is centred on your visualisation. Go back to our main interface and check this by right-clicking on the layer name and selecting `Zoom to layer`. Returning to your Print Layout, click on `Add a new Map to the layout` on the left-hand tool bar. Click and drag a box which will contain the map across the whole page. You can see that the panel on the right shows what items you've added to the page.
+
+```{r, echo=FALSE, out.width="900px", fig.align="center", fig.cap = "<br> Add a new map to your Print Layout, and drag it across the blank page."}
+knitr::include_graphics("img/map_layout1.png")
+```
+
+<br>
+
+To add a legend, find the `Add a new Legend to the layout` on the left-hand tool bar. Again, click and drag where you'd like it to go. By default, the legend will include all the layers you have loaded in QGIS. To override this, select the legend item in the right-hand panel, and click on the `Item Properties` tab, untick the `Auto update` box, and then remove the unwanted layers by selecting them and clicking the red minus symbol. You will likely only want to keep the **Count** category on the legend. Within this tab, you can also edit the legend title, font style and font size, along with a host of other features.
+
+<br>
+
+```{r, echo=FALSE, out.width="600px", fig.align="center", fig.cap = "<br> Removing legend categories using the item properties tab in Print Layout."}
+knitr::include_graphics("img/legend.png")
+```
+
+<br>
+
+You can add a scale bar using the `Add a new Scale Bar to the layout` in the same manner as the other features above (i.e. click and drag). Within `Item Properties` you can change the length, height, font and number of segments in the scale bar. The north arrow tends to be added as an image using the `Add a new Picture to the layout` tab, so find out that you like, save it your machine, and add it to your layout. Finally, to add a title, you can use the `Add new a Label to the layout` tab (you get the idea by now!). Again, the `Item Properties` allow you to change things like the font size and type. The properties of each item can be a little tricky to figure out: it will take some degree of trial and error, which is why there is no step-by-step guide here. Once you've got the hang of it, you'll be able to add these features to your layout quite easily. The following map might give you some ideas, but feel to be more creative, and to try different designs out. 
+
+```{r, echo=FALSE, out.width="900px", fig.align="center", fig.cap = "<br> Example of the crime map designed in the Print Layout."}
+knitr::include_graphics("img/final_map.png")
+```
+
+<br>
+
+There are a variety of different ways you can now export this image to your local machine, but a common one will be via the `Export as image` icon in the top tool bar, for things like .PNG formats. This will give you a few options, such as the page dimensions and DPI (resolution), but you can also export as an SVG (good for web pages) and PDF file.
+
+And there you have it! If you have followed this exercise from the very beginning you have learnt a whole host of skills. You've converted a mundane spreadsheet into vector point data of anti-social behaviour incidents in Greater Manchester. You loaded in vector polygon data of neighbourhoods, clipped the points to the boundaries of the region, aggregated the data to a census block unit, and then created a thematic map visualising the disribution.
+
+# Exercise 3: GM demographics and/or own data
 
 # Data resources
 

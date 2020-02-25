@@ -4,7 +4,7 @@ username:
 account: rpubs
 server: rpubs.com
 hostUrl: rpubs.com
-appId: https://api.rpubs.com/api/v1/document/577959/598287265370471188d9e2e0848412e0
-bundleId: https://api.rpubs.com/api/v1/document/577959/598287265370471188d9e2e0848412e0
-url: http://rpubs.com/langton_/577959
-when: 1582565908.06705
+appId: https://api.rpubs.com/api/v1/document/578309/ab01f0faa1a3404fa1bd81572faf410a
+bundleId: https://api.rpubs.com/api/v1/document/578309/ab01f0faa1a3404fa1bd81572faf410a
+url: http://rpubs.com/publish/claim/578309/4e3e1ff6980847db976723804ac42931
+when: 1582624223.97877

@@ -1,5 +1,5 @@
 ---
-title: "Introduction to QGIS: worksheet 2"
+title: "Introduction to QGIS: afternoon session"
 author: "Sam Langton"
 date: "26/02/2020"
 output:
@@ -229,4 +229,4 @@ As we noted at the beginning, today is somewhat of a crash course in QGIS, to he
 - A colleague and I wrote a short chapter for SAGE on introducing GIS and geovisual analysis. It is not published yet, but it is available [online](https://www.research.manchester.ac.uk/portal/en/publications/gis-and-geovisual-analysis(6f08f8f5-fb0c-4280-8c82-c8f1b7e02d76).html).
 - One of the biggest advocates of QGIS is Alasdair Rae from the University of Sheffield. He shares very cool maps on [Twitter](https://twitter.com/undertheraedar?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor), including some interesting data visualisations on topics like deprivation.
 - As mentioned earlier, one of the most useful online resources is actually the QGIS [documentation](https://docs.qgis.org/3.4/en/docs/training_manual/introduction/intro.html). It includes practical skills in QGIS but also more general information about GIS.
-- Taking your GIS research further, a fantastic domestic conference is [GISRUK](http://gisruk.org/). It is a small but friendly and welcoming conference for GIS users form all disciplines. Their website contains all conference proceedings of previous papers.
+- Taking your GIS research further, a fantastic domestic conference is [GISRUK](http://gisruk.org/). It is a small but friendly and welcoming conference for GIS users from numerous disciplines. Their website contains conference proceedings of all previous papers.

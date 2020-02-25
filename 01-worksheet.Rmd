@@ -1,5 +1,5 @@
 ---
-title: "Introduction to QGIS: worksheet 1"
+title: "Introduction to QGIS: morning session"
 author: "Sam Langton"
 date: "26/02/2020"
 output:

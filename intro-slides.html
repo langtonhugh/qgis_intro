@@ -90,23 +90,87 @@ Material: https://github.com/langtonhugh/qgis_intro
 
 **15.30-17.00**
 
+- Continue exercises
 - Mini-projects
-
 
 ---
 
 ## What is GIS?
 
-- Geographic Information System (GIS).
+- Geographic Information System (GIS) - **QGIS is one of them!**
+
+---
+
+## What is GIS?
+
+- Geographic Information System (GIS) - **QGIS is one of them!**
 - Tool for storing, manipulating, visualising and analysing spatial information.
-- You have likely used some form of GIS before [online](https://www.google.com/maps).
+- You have likely used some form of GIS before.
 - It is an entire field and community.
-- Widely used in academia, government, military and industry. 
-- Increasingly sought-after skill.
+- Used in academic research, government, charities, military and private sectors.
 
-&lt;img src="img/gis.jpg" width="500px" style="display: block; margin: auto;" /&gt;
+&lt;img src="img/qgis.png" width="550px" style="display: block; margin: auto;" /&gt;
 
-Source: [GIS Geography](https://gisgeography.com/what-gis-geographic-information-systems/).
+Source: [Hatari Labs](https://www.youtube.com/watch?v=PZ7oUmD5DnU).
+
+---
+
+## Why use GIS?
+
+&lt;center&gt;
+
+**Social processes and outcomes are spatial!**
+
+---
+
+## Why use GIS?
+
+&lt;img src="img/regional_ineq.png" width="370px" style="display: block; margin: auto;" /&gt;
+
+**Regional inequality.** Source: [ONS](https://www.sheffield.ac.uk/news/nr/uk-higher-regional-inequality-large-wealthy-country-1.862262).
+
+---
+
+## Why use GIS?
+
+
+&lt;img src="img/brexit.png" width="400px" style="display: block; margin: auto;" /&gt;
+
+**Voting behaviour.** Source: [University of Oxford](http://www.ox.ac.uk/news-and-events/oxford-and-brexit/brexit-analysis/mapping-brexit-vote).
+
+---
+
+## Why use GIS?
+
+
+
+&lt;img src="img/blackpool.png" width="600px" style="display: block; margin: auto;" /&gt;
+
+**Neighbourhood deprivation.** Source: [The Conversation](http://theconversation.com/even-the-most-beautiful-maps-can-be-misleading-126474).
+
+---
+
+## Why use GIS?
+
+&lt;img src="img/bbc_knife.png" width="440px" style="display: block; margin: auto;" /&gt;
+
+**Crime concentrations.** Source: [BBC](https://www.bbc.com/news/uk-england-london-49921421).
+
+---
+
+## Why use GIS?
+
+&lt;img src="img/robin.png" width="400px" style="display: block; margin: auto;" /&gt;
+
+**Transport.** Source: [Robin Lovelace](hhttps://twitter.com/robinlovelace/status/959853407749246976).
+
+---
+
+## Why use GIS?
+
+&lt;img src="img/france.png" width="450px" style="display: block; margin: auto;" /&gt;
+
+Source: Michel Guerry &amp; Adriano Balbi
 ---
 
 ## What is QGIS?
@@ -167,29 +231,76 @@ Source: [QGIS user conference 2019](https://2019.qgis.es/)
 
 &lt;img src="img/mouse.gif" width="600px" style="display: block; margin: auto;" /&gt;
 
+
 ---
 
 ## GIS fundamentals
 
-- Spatial data
-- Projections
+&lt;br&gt;
+
+&lt;img src="img/grom.gif" width="550px" style="display: block; margin: auto;" /&gt;
 
 ---
 
-## Spatial data
+## GIS fundamentals: spatial data
+
+- Spatial data simply represent the real world.
+- Describes the location, size and shape of entities.
+- Quantified for use in GIS.
+
+&lt;img src="img/hbs.png" width="600px" style="display: block; margin: auto;" /&gt;
 
 ---
 
-## Projections
+## GIS fundamentals: _vector_ spatial data
 
+&lt;img src="img/vector_data.png" width="450px" style="display: block; margin: auto;" /&gt;
+
+Source: [Data Carpentry](https://datacarpentry.org/organization-geospatial/02-intro-vector-data/). 
+
+---
+
+## GIS fundamentals: _vector_ spatial data
+
+&lt;img src="img/lotr.png" width="700px" style="display: block; margin: auto;" /&gt;
+
+---
+
+## GIS fundamentals: projections
+
+- Maps tend to represent the (~spherical) earth on flat surfaces (e.g. paper, screens).
+- Doing this requires a transformation.
+- GIS (including QGIS) are no exception.
+- This inherently introduces distortion.
+- There are many, each with advantages and disadvantages.
+
+&lt;br&gt;
+
+&lt;img src="img/qgisproj.png" width="600px" style="display: block; margin: auto;" /&gt;
 
 ---
 
 ## Live demo
 
+&lt;img src="img/metrolink.png" width="700px" style="display: block; margin: auto;" /&gt;
+
 ---
 
-## Further resources
+## Extras
+
+---
+
+## GIS fundamentals: data formats
+
+- Today, we will use shapefiles (`.shp`).
+- Shapefiles are a popular format to store geospatial vector data.
+- Unlike standard 2D data frames, such as .csv files, shapefiles contains multiple components.
+  - `.shp`
+  - `.dbf`
+  - `.prj`
+  - `.shx`
+- But there are other formats, such as _.geojson_ or _kml_, which you might come across.
+- There is some [debate](https://gis.stackexchange.com/questions/64909/which-data-formats-are-best-for-open-data-distribution) over the most appropriate, with each having their own advantages and disadvantages.
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>

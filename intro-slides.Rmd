@@ -106,9 +106,9 @@ Material: https://github.com/langtonhugh/qgis_intro
 
 - Geographic Information System (GIS) - **QGIS is one of them!**
 - Tool for storing, manipulating, visualising and analysing spatial information.
-- You have likely used some form of GIS before.
+- You have likely used some form of GIS before online.
 - It is an entire field and community.
-- Used in academic research, government, charities, military and private sectors.
+- Used in [academic](http://gisruk.org/) research, [government](https://mappinggm.org.uk/gmodin/), [charities](https://thirdsectorgeography.com/), military and private sectors.
 
 ```{r, echo=FALSE, out.width="550px", fig.align="center"}
 knitr::include_graphics("img/qgis.png")
@@ -271,9 +271,9 @@ knitr::include_graphics("img/grom.gif")
 
 ## GIS fundamentals: spatial data
 
-- Spatial data simply represent the real world.
+- Spatial data simply represents the real world.
 - Describes the location, size and shape of entities.
-- Quantified for use in GIS.
+- Must be quantified for use in GIS.
 
 ```{r, echo=FALSE, out.width="600px", fig.align="center"}
 knitr::include_graphics("img/hbs.png")
@@ -304,8 +304,8 @@ knitr::include_graphics("img/lotr.png")
 - Maps tend to represent the (~spherical) earth on flat surfaces (e.g. paper, screens).
 - Doing this requires a transformation.
 - GIS (including QGIS) are no exception.
-- This inherently introduces distortion.
 - There are many, each with advantages and disadvantages.
+- Today: [WGS 84](https://en.wikipedia.org/wiki/World_Geodetic_System) and the [British National Grid](https://www.ordnancesurvey.co.uk/documents/resources/guide-to-nationalgrid.pdf).
 
 <br>
 

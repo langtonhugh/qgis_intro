@@ -21,13 +21,13 @@ This worksheet contains material for an introductory QGIS course held at the [Ca
 
 The aim of this short course is to get you started using QGIS as a tool for creating, manipulating, exploring and visualising spatial data. As we will see, QGIS is a powerful piece of software for generating aesthetically pleasing maps, but it is also invaluable for conducting analysis and substantive exploratory research. The material we cover today will equip you with the skills necessary to begin visualising and analysing your own data. Once you're comfortable with the skills introduced in the guided exercises, please feel free to put these into practice using your own data, as per the guidance in the second worksheet.
 
-You can consider today to be somewhat of a 'crash course' in QGIS. As such, it's worthwhile remembering that the materials we cover today form part of a much wider field commonly known as 'Geographic Information Science' (GIS). If you are interested in exploring this field more, there are some recommended books in the further reading section of the second worksheet. That said, the information provided in this course will provide you with more than enough information get started exploring spatial data and making maps!
+You can consider today to be somewhat of a 'crash course' in QGIS. As such, it's worthwhile remembering that the materials we cover today form part of a much wider field commonly known as 'Geographic Information Science'. If you are interested in exploring this field more, there are some recommended books in the further reading section of the second worksheet. That said, the information provided in this course will provide you with more than enough information get started exploring spatial data and making maps!
 
 # Why use QGIS?
 
-QGIS is an open-source piece of software. This means, for one thing, that it is free, which represents a significant advantage over comparable software like [ArcGIS](https://www.arcgis.com/index.html) for students and institutions (understandably) unwilling to fork out for licence fees. But that's just a practical advantage: open-source also means transparency, continuous development and a supportive community of developers and users. QGIS is a key part of a wider, growing movement towards open-source software in geospatial analysis, with tools like [GeoDa](https://geodacenter.github.io/) and [GIS functionality in R](https://geocompr.robinlovelace.net/intro.html) becoming increasingly popular too. A key benefit of QGIS being open-source is that it is constantly evolving, with lots of smart people continuously contributing to new versions and plug-ins to expand its capability.
+QGIS is an open-source Geographic Information System (GIS). This means, for one thing, that it is free, which represents a significant advantage over comparable software like [ArcGIS](https://www.arcgis.com/index.html) for students and institutions (understandably) unwilling to fork out for licence fees. But that's just a practical advantage: open-source also means transparency, continuous development and a supportive community of developers and users. QGIS is a key part of a wider, growing movement towards open-source software in geospatial analysis, with tools like [GeoDa](https://geodacenter.github.io/) and [GIS functionality in R](https://geocompr.robinlovelace.net/intro.html) becoming increasingly popular too. A key benefit of QGIS being open-source is that it is constantly evolving, with lots of smart people continuously contributing to new versions and plug-ins to expand its capability.
 
-```{r, echo=FALSE, out.width = "600px", fig.align= "center", fig.cap="QGIS is part of a wider open-soure movement."}
+```{r, echo=FALSE, out.width = "600px", fig.align= "center", fig.cap="QGIS is part of a wider open-source movement."}
 knitr::include_graphics("img/open_source.png")
 ```
 
@@ -66,7 +66,7 @@ polygons would mask a great deal of information. In such circumstances, raster d
 able to represent the real world more accurately than vector data. Rasters are comprised of a
 regular grid of cells, each of which contain associated attribute data, and can be used to
 represent continuous spatial information such as air pollution or remote sensing imagery of the
-Earth’s surface. The most common usage of raster data you might have come across are in meteorological maps, such as those used in weather reports. Data about regionwide precipitation or temperature, for instance, is often stored in raster format. As noted earlier, today we are going to focus on vector data, but if you'd like to explore raster data examples, please feel free to explore the raster-specific resources at the end of this worksheet, or give me a shout!
+Earth’s surface. The most common usage of raster data you might have come across are in meteorological maps, such as those used in weather reports. Data about regionwide precipitation or temperature, for instance, is often stored in raster format. As noted earlier, today we are going to focus on vector data, but if you'd like to explore raster data examples, please give me a shout!
 
 # Projections
 
@@ -164,7 +164,7 @@ Bringing up this box will give you a series of options. First, we need to select
 knitr::include_graphics("img/csv_layer_load.png")
 ```
 
-Once you've completed this information, click `Add` and close the window, and there we have it! You are viewing the point locations of tram stops in Greater Manchester. You can navigate around this data by scrolling and click+dragging your mouse. The **Layer** window now also contains `trams_geo`. Just to make more sense of our introduction earlier, it's worth mentioning that these points are _vector data_, a common way of representing specific pinpoint locations in QGIS. Each point has associated attribute data which was contained in the original .csv file. You can view it by clicking on the table symbol in the toolbar at the top of your interface. You'll notice that this table is exactly the same as our original spreadsheet.
+Once you've completed this information, click `Add` and close the window, and there we have it! You are viewing the point locations of tram stops in Greater Manchester. You can navigate around this data by scrolling and click+dragging your mouse. The **layer** window now also contains `trams_geo`. Just to make more sense of our introduction earlier, it's worth mentioning that these points are _vector data_, a common way of representing specific pinpoint locations in QGIS. Each point has associated attribute data which was contained in the original .csv file. You can view it by clicking on the table symbol in the toolbar at the top of your interface. You'll notice that this table is exactly the same as our original spreadsheet.
 
 ```{r, echo=FALSE, out.width="300px", fig.align="center", fig.cap = "<br> Attribute table icon."}
 knitr::include_graphics("img/attribute.png")
@@ -172,7 +172,7 @@ knitr::include_graphics("img/attribute.png")
 
 ## Preliminary exploration
 
-A good way to begin exploring data like this, either for interest or to identify interesting patterns, is by using the `Properties...` option accessible from each layer. You can access this option by right clicking on the name of the layer itself in the **Layer** window, in this case, trams_geo. It will bring up a window with lots of options down the left hand side, including basic information about the layer itself (e.g. the CRS), but also options to add information to your map using symbology and labels. There are endless options with these properties, many of which we'll cover today, but for starters, let's add some labels to our points so we can identify what is what. A basic single label can be used to display the _stop_ variable (i.e. the name of the stop) for each point, as shown in the below screenshot. Feel free to make amendments to the text font, style and size as you see fit.
+A good way to begin exploring data like this, either for interest or to identify interesting patterns, is by using the `Properties...` option accessible from each layer. You can access this option by right clicking on the name of the layer itself in the **layer** window on the left-hand side of the interface - it's the last one in this drop-down menu. Do this now for `trams_geo`. This will bring up a window with lots of options down the left hand side, including basic information about the layer itself (e.g. the CRS), but also options to add information to your map using symbology and labels. There are endless options with these properties, many of which we'll cover today, but for starters, let's add some labels to our points so we can identify what is what. A basic single label can be used to display the _stop_ variable (i.e. the name of the stop) for each point, as shown in the below screenshot. Feel free to make amendments to the text font, style and size as you see fit.
 
 ```{r, echo=FALSE, out.width="700px", fig.align="center", fig.cap = "<br> Adding labels to points."}
 knitr::include_graphics("img/labels.png")
@@ -188,7 +188,7 @@ knitr::include_graphics("img/labels_map.png")
 
 <br>
 
-In a similar manner to how we have just linked the _stop_ variable to each point to display information, we can use these preferences to change other visual features. An accessible and simple way to portray information about each point is to colour them by a variable using symbology, also available in the `Preferences...` window. Let's colour each point according to the line on which the stop is situated. Because the variable containing this information _line_ is discrete (i.e. categorical) we will replace the current basic single symbol with the _Categorized_ option. Your choice in this drop-down menu very much depends on what feature or variable in the map you want to change.
+In a similar manner to how we have just linked the _stop_ variable to each point to display information, we can use these preferences to change other visual features. An accessible and simple way to portray information about each point is to colour them by a variable using symbology, also available in the `Preferences...` window. Let's colour each point according to the line on which the stop is situated. Because the variable containing this information - _line_ - is discrete (i.e. categorical) we will replace the current basic single symbol with the _Categorized_ option. Your choice in this drop-down menu very much depends on what feature or variable in the map you want to change.
 
 <br>
 

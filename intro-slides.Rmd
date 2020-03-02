@@ -305,7 +305,7 @@ knitr::include_graphics("img/lotr.png")
 - Doing this requires a transformation.
 - GIS (including QGIS) are no exception.
 - There are many, each with advantages and disadvantages.
-- Today: [WGS 84](https://en.wikipedia.org/wiki/World_Geodetic_System) and the [British National Grid](https://www.ordnancesurvey.co.uk/documents/resources/guide-to-nationalgrid.pdf).
+- Today: geographic CRS [WGS 84](https://en.wikipedia.org/wiki/World_Geodetic_System) and projected CRS [British National Grid](https://www.ordnancesurvey.co.uk/documents/resources/guide-to-nationalgrid.pdf).
 
 <br>
 

@@ -49,7 +49,7 @@ knitr::include_graphics("img/save_selected.png")
 
 <br>
 
-This brings up a window in which you must select where you'd like the data to be saved and what to call it, along with a number of other options, such as whether to save it with a projection, and whether to add it to your current map view. You will notice that the data format is an [ESRI Shapefile](https://doc.arcgis.com/en/arcgis-online/reference/shapefiles.htm), a popular format for storing vector data like this, which we discussed a little earlier today. You can leave most of these sections untouched, but make sure you select a file location and ensure you have ticked `Add saved file to map`, like the example below.
+This brings up a window in which you must select where you'd like the data to be saved and what to call it, along with a number of other options, such as whether to save it with a CRS, and whether to add it to your current map view. You will notice that the data format is an [ESRI Shapefile](https://doc.arcgis.com/en/arcgis-online/reference/shapefiles.htm), a popular format for storing vector data like this, which we discussed a little earlier today. You can leave most of these sections untouched, but make sure you select a file location and ensure you have ticked `Add saved file to map`, like the example below.
 
 <br>
 

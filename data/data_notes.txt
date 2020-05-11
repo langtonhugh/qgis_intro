@@ -1,4 +1,0 @@
-Notes
-
-Metrolink_Station_Facilities 
-- Manchester line had missings for cycle lockers and stands, imputed as zeros.

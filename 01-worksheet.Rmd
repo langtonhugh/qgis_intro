@@ -1,7 +1,7 @@
 ---
-title: "Introduction to QGIS: morning session"
+title: "Introduction to QGIS"
 author: "Sam Langton"
-date: "26/02/2020"
+date: "12/05/2020"
 output:
   html_document:
     toc: yes
@@ -15,13 +15,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 # Preamble
 
-This worksheet contains material for an introductory QGIS course held at the [Cathie Marsh Institute for Social Research](https://www.cmi.manchester.ac.uk/) on 26 February 2020. All material is available on [GitHub](https://github.com/langtonhugh/qgis_intro).
-
-# Background
-
-The aim of this short course is to get you started using QGIS as a tool for creating, manipulating, exploring and visualising spatial data. As we will see, QGIS is a powerful piece of software for generating aesthetically pleasing maps, but it is also invaluable for conducting analysis and substantive exploratory research. The material we cover today will equip you with the skills necessary to begin visualising and analysing your own data. Once you're comfortable with the skills introduced in the guided exercises, please feel free to put these into practice using your own data, as per the guidance in the second worksheet.
-
-You can consider today to be somewhat of a 'crash course' in QGIS. As such, it's worthwhile remembering that the materials we cover today form part of a much wider field commonly known as 'Geographic Information Science'. If you are interested in exploring this field more, there are some recommended books in the further reading section of the second worksheet. That said, the information provided in this course will provide you with more than enough information get started exploring spatial data and making maps!
+This worksheet contains material for an introductory QGIS workshop hosted online for [Open Data Manchester](https://www.opendatamanchester.org.uk/) on 12 May 2020. All material is available on [GitHub](https://github.com/langtonhugh/qgis_intro/tree/odm_qgis_intro).
 
 # Why use QGIS?
 
@@ -96,7 +90,7 @@ knitr::include_graphics("img/greenwich.png")
 
 As we'll find out later today, not all data you have collected or downloaded will use latitude and longitude coordinates. For example, lots of data released in Britain uses a projected CRS called the [British National Grid](BNG), which uses Eastings and Northings to define locations in the British Isles based on a [grid system](https://getoutside.ordnancesurvey.co.uk/guides/beginners-guide-to-grid-references/), rather than longitude and latitude. It has some advantages, such as preserving shapes, and one can accurately calculate direction using the BNG. In fact, many areas of the world have their [own projected CRS](https://desktop.arcgis.com/en/arcmap/10.3/guide-books/map-projections/pdf/projected_coordinate_systems.pdf) for similar reasons. It is beyond the scope of this course (and indeed, many GIS users) to discuss the merits and shortcomings of different CRS in detail. However, it is important to be aware of the CRS associated with your data, and to ensure that you are using the most appropriate one. Doing so will ensure that you are displaying information accurately, especially when overlaying multiple data sources. We went through this practically during the live demonstration of QGIS, but it will be covered again during the exercises later today, using both WSG 84 and the BNG.
 
-If you want to read more about projections and CRS, you can read the excellent QGIS documentation [online](https://docs.qgis.org/testing/en/docs/gentle_gis_introduction/coordinate_reference_systems.html). There are also some useful resources made available by [Data Carpentry](https://datacarpentry.org/organization-geospatial/03-crs/). Alternatively, please feel free to ask me!
+If you want to read more about projections and CRS, you can read the excellent QGIS documentation [online](https://docs.qgis.org/testing/en/docs/gentle_gis_introduction/coordinate_reference_systems.html). There are also some useful resources made available by [Data Carpentry](https://datacarpentry.org/organization-geospatial/03-crs/).
 
 <br>
 
@@ -112,7 +106,7 @@ Now we are familiar with some GIS fundamentals, we can move on to opening up QGI
 
 ## Quick tour
 
-For these tutorials we will be using QGIS version 3.6.3 in order to match what is in the computer lab. If you are using your own laptop, you might have a different version, but it shouldn't make too much difference. All previous releases of QGIS can be downloaded retrospectively from their [website](https://qgis.org/downloads/) if you want the exact same version.
+For these tutorials we will be using QGIS version 3.6.3. If you are using your own laptop, you might have a different version, but it shouldn't make too much difference. All current and previous releases of QGIS can be downloaded retrospectively from their [website](https://qgis.org/downloads/) if you want the exact same version.
 
 ```{r, echo=FALSE, out.width="800px", fig.align="center", fig.cap = "Basic QGIS interface."}
 knitr::include_graphics("img/interface.png")
@@ -249,6 +243,3 @@ knitr::include_graphics("img/osm_trams.png")
 <br>
 
 Spend some time trying out different labeling and symbology options on different variables to answer your own research questions. How do different tram stops fair when it comes to other forms of accessibility, such as ramps? How might we best visualise this? 
-
-Once you've had a good exploration of the tram data, feel free to move on to Exercise 2 in the next worksheet using police recorded crime data.
-

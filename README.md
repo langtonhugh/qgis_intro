@@ -1,1 +1,1 @@
-This material contains the slides and worksheets for an Introduction to QGIS workshop at the University of Manchester.
+This material contains the slides and worksheets for an Introduction to QGIS online workshop hosted by Open Data Manchester.

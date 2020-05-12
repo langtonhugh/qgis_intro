@@ -1,6 +1,6 @@
 ---
 title: "Introduction to QGIS"
-author: "Sam Langton"
+author: "Sam Langton, Manchester Metropolitan University"
 date: "12/05/2020"
 output:
   html_document:
@@ -15,7 +15,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 # Preamble
 
-This worksheet contains material for an introductory QGIS workshop hosted online for [Open Data Manchester](https://www.opendatamanchester.org.uk/) on 12 May 2020. All material is available on [GitHub](https://github.com/langtonhugh/qgis_intro/tree/odm_qgis_intro).
+This worksheet contains material for an introductory QGIS workshop hosted online for [Open Data Manchester](https://www.opendatamanchester.org.uk/) on 12 May 2020. It forms part of a more comprehensive course ran at the [Cathie Marsh Institute](https://www.cmi.manchester.ac.uk/study/short/list/), University of Manchester.
 
 # Why use QGIS?
 

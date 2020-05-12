@@ -247,7 +247,6 @@ knitr::include_graphics("img/lotr.png")
 ## GIS fundamentals: projections
 
 - Maps tend to represent the (~spherical) earth on flat surfaces (e.g. paper, screens).
-- Doing this requires a transformation.
 - Be aware of the Coordinate Reference System (CRS).
 - Geographic CRS (e.g. [WGS 84](https://en.wikipedia.org/wiki/World_Geodetic_System)).
 - Projected CRS (e.g. [British National Grid](https://www.ordnancesurvey.co.uk/documents/resources/guide-to-nationalgrid.pdf)).
